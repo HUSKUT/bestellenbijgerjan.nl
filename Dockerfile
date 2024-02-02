@@ -1,5 +1,5 @@
 # Use an Alpine Linux base image
-FROM --platform=linux/arm64/v8 alpine:3.19
+FROM --platform=linux/arm64 alpine:3.19
 
 # Install necessary tools
 RUN apk update && \
