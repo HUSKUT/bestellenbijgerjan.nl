@@ -6,12 +6,12 @@ WORKDIR /var/www/html
 
 # Copy only necessary files for the application
 COPY index.php .
-
-# Set the PORT environment variable
-ENV PORT=8080
+#
+## Set the PORT environment variable
+#ENV PORT=8080
 
 # Expose the port that Cloud Run will use
-EXPOSE $PORT
+EXPOSE 8080
 
 # Start Apache server in the foreground
 CMD ["apache2-foreground"]
