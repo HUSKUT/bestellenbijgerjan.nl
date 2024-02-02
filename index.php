@@ -10,6 +10,6 @@
 </head>
 <body>
 
-<img src="https://static.dw.com/image/52560344_906.jpg">
+<img src="https://static.dw.com/image/52560344_906.jpg" style="width: 100%;">
 </body>
 </html>
