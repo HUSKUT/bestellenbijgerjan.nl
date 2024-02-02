@@ -10,6 +10,8 @@ COPY index.php .
 ## Set the PORT environment variable
 #ENV PORT=8080
 
+FROM php:7-apache
+RUN sed -i 's/Listen 80/Listen 8080}/' /etc/apache2/ports.conf
 # Expose the port that Cloud Run will use
 EXPOSE 8080
 
