@@ -39,7 +39,10 @@ async fn listRestaurants() -> JsonValue {
         .headers(headers);
 
     let response = request.send().await;
+
+    print!("{:?}", response);
     let body = response.unwrap().json().await;
+    print!("{:?}", body);
 
     let result = result_to_string(body);
     json!( { "body": result["restaurants"]} )
