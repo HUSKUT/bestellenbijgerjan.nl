@@ -40,8 +40,9 @@ async fn listRestaurants() -> JsonValue {
 
     let response = request.send().await;
 
-    print!("{:?}", response);
-    let body = response.unwrap().json().await;
+    let unwrapped = response.unwrap();
+    print!("{}", unwrapped.status());
+    let body = unwrapped.json().await;
     print!("{:?}", body);
 
     let result = result_to_string(body);
